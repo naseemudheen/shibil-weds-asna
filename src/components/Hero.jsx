@@ -132,11 +132,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+      <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-2 z-20 pointer-events-none"
+        onClick={() => document.getElementById('couple')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-2 z-20 cursor-pointer hover:opacity-80 transition-opacity"
       >
         <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold-400/80">Scroll to Explore</span>
         <motion.div
@@ -146,7 +147,7 @@ const Hero = () => {
         >
           <ChevronDown size={20} />
         </motion.div>
-      </motion.div>
+      </motion.button>
 
       {/* Music Toggle */}
       <motion.button
