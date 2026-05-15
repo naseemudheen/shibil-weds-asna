@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           <p className="text-xs text-gold-400/50 uppercase tracking-[0.3em] font-sans">
-            Shibili & Asna &copy; 2026
+            Shibili & Asna &copy; 2027
           </p>
         </motion.div>
       </div>
