@@ -24,7 +24,7 @@ const CoupleIntro = () => {
         </motion.div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-8 lg:gap-20">
-          {/* Bride Section */}
+          {/* Groom Section */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -36,13 +36,13 @@ const CoupleIntro = () => {
             <div className="absolute -top-6 -left-6 w-16 h-16 border-t-2 border-l-2 border-gold-400 rounded-tl-xl opacity-50"></div>
             <div className="absolute -bottom-6 -right-6 w-16 h-16 border-b-2 border-r-2 border-gold-400 rounded-br-xl opacity-50"></div>
             
-            <h3 className="font-script text-4xl md:text-5xl text-cream-100 mb-2">Asna P V</h3>
-            <p className="font-serif text-gold-400 text-sm uppercase tracking-widest mb-6">The Bride</p>
+            <h3 className="font-script text-4xl md:text-5xl text-cream-100 mb-2">Muhammed Shibili</h3>
+            <p className="font-serif text-gold-400 text-sm uppercase tracking-widest mb-6">The Groom</p>
             
             <div className="font-sans text-cream-200/80 space-y-2 text-sm md:text-base">
-              <p>D/O Mr. Veerasahib P A & Mrs. Hafsath</p>
-              <p>Al Farah, Panamkulambu,</p>
-              <p>Mudappallur P.O, Palakkad</p>
+              <p>S/O Mr. Yousaf & Mrs. Shahidha Yousaf</p>
+              <p>Kurunian Parakkal (H.O), Othukkungal,</p>
+              <p>Potikkallu, Malappuram</p>
             </div>
           </motion.div>
 
@@ -58,7 +58,7 @@ const CoupleIntro = () => {
             <span className="font-script text-3xl text-gold-400">&amp;</span>
           </motion.div>
 
-          {/* Groom Section */}
+          {/* Bride Section */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -70,13 +70,13 @@ const CoupleIntro = () => {
             <div className="absolute -top-6 -right-6 w-16 h-16 border-t-2 border-r-2 border-gold-400 rounded-tr-xl opacity-50"></div>
             <div className="absolute -bottom-6 -left-6 w-16 h-16 border-b-2 border-l-2 border-gold-400 rounded-bl-xl opacity-50"></div>
             
-            <h3 className="font-script text-4xl md:text-5xl text-cream-100 mb-2">Muhammed Shibili</h3>
-            <p className="font-serif text-gold-400 text-sm uppercase tracking-widest mb-6">The Groom</p>
+            <h3 className="font-script text-4xl md:text-5xl text-cream-100 mb-2">Asna P V</h3>
+            <p className="font-serif text-gold-400 text-sm uppercase tracking-widest mb-6">The Bride</p>
             
             <div className="font-sans text-cream-200/80 space-y-2 text-sm md:text-base">
-              <p>S/O Mr. Yousaf & Mrs. Shajidha Yousaf</p>
-              <p>Kurunian Parakkal (H.O), Othukkungal,</p>
-              <p>Potikkallu, Malappuram</p>
+              <p>D/O Mr. Veerasahib P A & Mrs. Hafsath</p>
+              <p>Al Farah, Panamkulambu,</p>
+              <p>Mudappallur P.O, Palakkad</p>
             </div>
           </motion.div>
         </div>

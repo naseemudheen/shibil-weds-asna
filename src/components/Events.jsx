@@ -162,25 +162,6 @@ const Events = () => {
             delay={0.6}
           />
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.button
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1, duration: 1 }}
-          onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
-          className="mt-16 mx-auto flex flex-col items-center justify-center gap-2 cursor-pointer hover:opacity-80 transition-opacity relative z-20"
-        >
-          <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold-400/80">Next Section</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="text-gold-400"
-          >
-            <ChevronDown size={20} />
-          </motion.div>
-        </motion.button>
       </div>
     </section>
   );
