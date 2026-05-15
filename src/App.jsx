@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Lenis from 'lenis';
 import LoadingScreen from './components/LoadingScreen';
 import Hero from './components/Hero';
 import CoupleIntro from './components/CoupleIntro';
@@ -11,6 +12,27 @@ function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    // Smooth Scrolling Setup
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Mouse Tracking Setup
     const updateMousePosition = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -19,6 +41,7 @@ function App() {
 
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
+      lenis.destroy();
     };
   }, []);
 
