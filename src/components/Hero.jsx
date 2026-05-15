@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Volume2, VolumeX } from 'lucide-react';
+import { Volume2, VolumeX, ChevronDown } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import Logo from './Logo';
 
@@ -131,13 +131,30 @@ const Hero = () => {
         </motion.div>
       </div>
 
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.5, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-2 z-20 pointer-events-none"
+      >
+        <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold-400/80">Scroll to Explore</span>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="text-gold-400"
+        >
+          <ChevronDown size={20} />
+        </motion.div>
+      </motion.div>
+
       {/* Music Toggle */}
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5 }}
         onClick={toggleMute}
-        className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full glass-card flex items-center justify-center text-gold-400 hover:text-gold-light hover:scale-110 transition-all duration-300"
+        className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full glass-card flex items-center justify-center text-gold-400 hover:text-gold-light hover:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.1)]"
       >
         {isPlaying ? (
           <div className="relative">
