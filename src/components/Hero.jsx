@@ -45,7 +45,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-between items-center overflow-hidden bg-primary-900 pt-8 md:pt-12">
+    <section id="hero" className="relative min-h-[100svh] flex flex-col justify-between items-center overflow-hidden bg-primary-900 pt-4 md:pt-12">
       {/* Background Texture Overlay */}
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/floral-pattern.png")' }}></div>
       
@@ -77,14 +77,26 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-4 w-full mx-auto flex flex-col items-center justify-center flex-1 my-4 md:my-8">
+      <div className="relative z-10 text-center px-4 w-full mx-auto flex flex-col items-center justify-center flex-1 mt-1 mb-2 md:my-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="mb-4 md:mb-8"
+          className="mb-4 md:mb-8 flex flex-col items-center"
         >
-          <Logo size="md" className="mb-4 md:mb-6" />
+          <Logo size="md" className="mb-3 md:mb-5" />
+          <p
+            style={{
+              fontFamily: '"Great Vibes", "Dancing Script", cursive',
+              fontSize: 'clamp(1rem, 3.5vw, 1.4rem)',
+              color: 'rgba(212,175,55,0.85)',
+              textShadow: '0 1px 10px rgba(212,175,55,0.2)',
+              lineHeight: 1.6,
+            }}
+            className="mb-2"
+          >
+            In the name of Allah, the most Gracious and most Merciful
+          </p>
           <p className="font-serif text-gold-400 uppercase tracking-[0.2em] text-sm md:text-base">
             Together with our families
           </p>

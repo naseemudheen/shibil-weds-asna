@@ -3,7 +3,7 @@ import Logo from './Logo';
 
 const Footer = () => {
   return (
-    <footer className="py-20 px-4 bg-primary-900 relative border-t border-gold-400/20 text-center overflow-hidden">
+    <footer id="footer" className="py-20 px-4 bg-primary-900 relative border-t border-gold-400/20 text-center overflow-hidden">
       {/* Decorative top border */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent"></div>
       
