@@ -94,15 +94,29 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 1 }}
-          className="my-8"
+          className="my-8 flex flex-col items-center"
         >
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-gradient-gold mb-4 drop-shadow-xl pb-2">
+          <motion.h1 
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="font-script text-6xl md:text-8xl lg:text-9xl text-gradient-gold mb-4 drop-shadow-xl pb-2"
+          >
             Muhammed Shibili
-          </h1>
-          <p className="font-script text-4xl md:text-6xl text-cream-200/80 my-4 drop-shadow-md">&amp;</p>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-gradient-gold drop-shadow-xl pb-2">
+          </motion.h1>
+          <motion.p 
+            animate={{ scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="font-script text-4xl md:text-6xl text-cream-200/80 my-4 drop-shadow-md"
+          >
+            &amp;
+          </motion.p>
+          <motion.h1 
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="font-script text-6xl md:text-8xl lg:text-9xl text-gradient-gold drop-shadow-xl pb-2"
+          >
             Asna P V
-          </h1>
+          </motion.h1>
         </motion.div>
 
         <motion.div

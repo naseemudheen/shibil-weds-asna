@@ -27,7 +27,13 @@ const Footer = () => {
 
           <div className="flex items-center justify-center gap-4 mb-12">
             <div className="h-px w-16 bg-gold-400/50"></div>
-            <span className="font-script text-gold-400 text-2xl">&hearts;</span>
+            <motion.span 
+              animate={{ scale: [1, 1.3, 1] }} 
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="font-script text-gold-400 text-2xl"
+            >
+              &hearts;
+            </motion.span>
             <div className="h-px w-16 bg-gold-400/50"></div>
           </div>
 

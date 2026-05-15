@@ -7,8 +7,9 @@ const EventCard = ({ title, date, time, venue, address, mapLink, delay }) => (
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
+    whileHover={{ y: -10, transition: { duration: 0.3 } }}
     transition={{ duration: 0.8, delay }}
-    className="flex-1 w-full glass-card rounded-2xl p-8 md:p-10 border-t-4 border-t-gold-400 relative overflow-hidden group hover:border-gold-400/80 transition-colors"
+    className="flex-1 w-full glass-card rounded-2xl p-8 md:p-10 border-t-4 border-t-gold-400 relative overflow-hidden group hover:border-gold-400 transition-colors hover:shadow-[0_20px_40px_rgba(212,175,55,0.15)]"
   >
     <div className="absolute top-0 right-0 w-32 h-32 bg-gold-600 rounded-full blur-[80px] opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity"></div>
     
@@ -122,12 +123,20 @@ const Events = () => {
               { label: 'Mins', value: timeLeft.minutes },
               { label: 'Secs', value: timeLeft.seconds }
             ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                className="flex flex-col items-center"
+              >
                 <div className="w-14 h-14 md:w-24 md:h-24 bg-primary-900 rounded-xl border border-gold-400/30 flex items-center justify-center shadow-inner shadow-black/50 mb-3">
                   <span className="font-serif text-2xl md:text-4xl text-cream-100">{item.value.toString().padStart(2, '0')}</span>
                 </div>
                 <span className="text-[10px] md:text-sm text-gold-400 uppercase tracking-widest font-bold">{item.label}</span>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>

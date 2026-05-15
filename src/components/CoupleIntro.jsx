@@ -28,8 +28,9 @@ const CoupleIntro = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
+            whileHover={{ scale: 1.05, y: -10 }}
             transition={{ duration: 1 }}
-            className="flex-1 text-center md:text-right p-8 glass-card rounded-2xl relative w-full"
+            className="flex-1 text-center md:text-right p-8 glass-card rounded-2xl relative w-full hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-shadow"
           >
             <div className="absolute -top-6 -left-6 w-16 h-16 border-t-2 border-l-2 border-gold-400 rounded-tl-xl opacity-50"></div>
             <div className="absolute -bottom-6 -right-6 w-16 h-16 border-b-2 border-r-2 border-gold-400 rounded-br-xl opacity-50"></div>
@@ -49,8 +50,9 @@ const CoupleIntro = () => {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="w-16 h-16 shrink-0 flex items-center justify-center rounded-full bg-primary-800 border border-gold-400 shadow-[0_0_15px_rgba(212,175,55,0.3)] z-10"
+            animate={{ boxShadow: ['0 0 15px rgba(212,175,55,0.3)', '0 0 30px rgba(212,175,55,0.6)', '0 0 15px rgba(212,175,55,0.3)'] }}
+            transition={{ duration: 0.8, boxShadow: { duration: 2, repeat: Infinity } }}
+            className="w-16 h-16 shrink-0 flex items-center justify-center rounded-full bg-primary-800 border border-gold-400 z-10"
           >
             <span className="font-script text-3xl text-gold-400">&amp;</span>
           </motion.div>
@@ -60,8 +62,9 @@ const CoupleIntro = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
+            whileHover={{ scale: 1.05, y: -10 }}
             transition={{ duration: 1 }}
-            className="flex-1 text-center md:text-left p-8 glass-card rounded-2xl relative w-full"
+            className="flex-1 text-center md:text-left p-8 glass-card rounded-2xl relative w-full hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-shadow"
           >
             <div className="absolute -top-6 -right-6 w-16 h-16 border-t-2 border-r-2 border-gold-400 rounded-tr-xl opacity-50"></div>
             <div className="absolute -bottom-6 -left-6 w-16 h-16 border-b-2 border-l-2 border-gold-400 rounded-bl-xl opacity-50"></div>
